@@ -25,9 +25,9 @@ jobs:
       - name: Setup Go environment
         uses: actions/setup-go@v3.5.0
         with:
-          # The Go version to download (if necessary) and use. Supports semver spec and ranges.
-          go-version: 1.19.1 # optional
           # Path to the go.mod or go.work file.
           go-version-file: go.mod # optional
           # Used to specify the path to a dependency file - go.sum
           cache-dependency-path: go.sum
+          
+      - run: ./build/maind
