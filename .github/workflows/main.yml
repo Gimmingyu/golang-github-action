@@ -25,9 +25,7 @@ jobs:
       - name: Setup Go environment
         uses: actions/setup-go@v3.5.0
         with:
-          # Path to the go.mod or go.work file.
-          go-version-file: go.mod # optional
-          # Used to specify the path to a dependency file - go.sum
+          go-version: 1.19.4
           cache-dependency-path: go.sum
           
       - run: ./build/maind
