@@ -28,4 +28,7 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+    - name: Makefile
+      run: make
+      
 
