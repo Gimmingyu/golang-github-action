@@ -10,7 +10,9 @@ build:
 	@echo "\033[92mBuilding maind...\033[0m"
 	@go build -o $(BUILD_DIR)/$(BUILD_OUTPUT) $(BUILD_TARGET)
 
-
+github-action:
+	CGO_ENABLED=0 GOOS=linux go build -mod=vendor -a -installsuffix cgo -o $@ ./cmd/...
+	
 clean:
 	rm $(BUILD_DIR)/$(BUILD_OUTPUT)
 
